@@ -2,6 +2,9 @@ import Header from '../components/header'
 import HeroSection from "../components/hero-section"
 import VisionSection from "../components/vision-section"
 import CollectionsSection from "../components/collections-section"
+import NewsSection from "../components/news-section"
+import ContactSection from "../components/contact-section"
+
 
 export default function Home() {
   return (
@@ -10,6 +13,8 @@ export default function Home() {
       <HeroSection />
       <VisionSection />
       <CollectionsSection />
+      <NewsSection />
+      <ContactSection />
     </main>
   )
 }
