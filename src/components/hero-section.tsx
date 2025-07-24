@@ -28,7 +28,7 @@ export default function HeroSection() {
       {/* Image avec effet parallaxe */}
       <div ref={heroRef} className="absolute inset-0 scale-110">
         <Image
-          src="/hero-fashion-portrait.webp"
+          src="/hero-fashion-portrait2.webp"
           alt="Création haute couture signature"
           fill
           className="object-cover object-center"
