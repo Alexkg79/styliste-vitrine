@@ -59,7 +59,7 @@ export default function HeroSection() {
           {/* CTA non conventionnel */}
           <div className="relative">
             <button className="group relative overflow-hidden bg-transparent border-2 border-white/30 text-white px-12 py-4 hover:border-amber-400 transition-all duration-700">
-              <span className="relative z-10 text-sm font-light tracking-[0.3em] uppercase">Explorer l'Univers</span>
+              <span className="relative z-10 text-sm font-light tracking-[0.3em] uppercase">Explorer l&apos;Univers</span>
 
               {/* Effet de remplissage */}
               <div className="absolute inset-0 bg-gradient-to-r from-amber-400/0 via-amber-400/20 to-amber-400/0 transform -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>

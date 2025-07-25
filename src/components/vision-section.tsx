@@ -11,7 +11,7 @@ export default function VisionSection() {
           <div className="relative">
             <div className="text-8xl md:text-9xl font-serif text-black/10 absolute -top-8 -left-4">"</div>
             <blockquote className="text-2xl md:text-3xl font-light text-neutral-800 leading-relaxed italic pl-8">
-              La mode n'est pas seulement ce que l'on porte, c'est l'expression de notre âme, la poésie de notre époque
+              La mode n&apos;est pas seulement ce que l&apos;on porte, c&apos;est l&apos;expression de notre âme, la poésie de notre époque
               traduite en formes et en matières.
             </blockquote>
             <div className="mt-8 pl-8">

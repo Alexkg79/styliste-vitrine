@@ -74,7 +74,7 @@ export default function AboutSection() {
 
             {/* Citation principale */}
             <div className="relative lg:order-2">
-                <div className="text-8xl md:text-9xl font-serif text-white/10 absolute -top-8 -left-4">"</div>
+                <div className="text-8xl md:text-9xl font-serif text-white/10 absolute -top-8 -left-4">&quot;</div>
                 <blockquote className="text-2xl md:text-3xl font-light text-neutral-300 leading-relaxed italic pl-8">
                 La mode n&apos;est pas seulement ce que l&apos;on porte, c&apos;est l&apos;expression de notre âme, la poésie de notre époque
                 traduite en formes et en matières.
@@ -93,7 +93,7 @@ export default function AboutSection() {
             <div>
                 <h4 className="text-amber-400 text-2xl font-serif mb-4">Savoir-Faire</h4>
                 <p className="text-neutral-400 text-md leading-relaxed">
-                Maîtrise des techniques ancestrales et innovation constante pour des pièces d'exception.
+                Maîtrise des techniques ancestrales et innovation constante pour des pièces d&apos;exception.
                 </p>
             </div>
             <div>

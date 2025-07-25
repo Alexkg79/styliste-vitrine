@@ -26,7 +26,7 @@ export default function NewsSection() {
         {/* Titre */}
         <div className="mb-20">
           <h2 className="text-5xl md:text-7xl font-serif text-black mb-4">Actualités</h2>
-          <p className="text-neutral-600 text-lg font-light">Les derniers moments forts de l'atelier</p>
+          <p className="text-neutral-600 text-lg font-light">Les derniers moments forts de l&apos;atelier</p>
         </div>
 
         {/* Timeline */}
