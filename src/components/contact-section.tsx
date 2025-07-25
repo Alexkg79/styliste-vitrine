@@ -31,7 +31,7 @@ export default function ContactSection() {
 
           <button className="group text-white hover:text-amber-400 transition-colors duration-300">
             <span className="text-sm font-light tracking-[0.15em] uppercase border-b border-white/30 group-hover:border-amber-400 pb-1">
-               <Link href="/about">Découvrir l'Atelier</Link>
+               <Link href="/about">Découvrir l&apos;Atelier</Link>
             </span>
           </button>
         </div>

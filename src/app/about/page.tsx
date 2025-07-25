@@ -12,11 +12,11 @@ export default function AboutSection() {
         <div className="container mx-auto px-8">
             {/* Titre principal de la section */}
             <div className="text-center mb-20">
-            <h2 className="text-6xl md:text-8xl font-serif text-white mb-6">L'Atelier.</h2>
+            <h2 className="text-6xl md:text-8xl font-serif text-white mb-6">L&apos;Atelier.</h2>
             <div className="w-24 h-px bg-amber-400 mx-auto"></div>
             <p className="mt-8 text-neutral-300 text-lg font-light max-w-3xl mx-auto">
-                Plus qu'une maison de couture, un lieu où l'art de la mode prend vie.
-                Découvrez l'âme créative derrière chaque pièce.
+                Plus qu&apos;une maison de couture, un lieu où l&apos;art de la mode prend vie.
+                Découvrez l&apos;âme créative derrière chaque pièce.
             </p>
             </div>
 
@@ -26,14 +26,14 @@ export default function AboutSection() {
             <div>
                 <h3 className="text-4xl font-serif text-white mb-6">Notre Histoire</h3>
                 <p className="text-neutral-300 text-lg leading-relaxed mb-6">
-                Fondé en 2020, l'Atelier. est né de la vision de créer une mode qui transcende le temps et les tendances.
-                Notre passion pour l'artisanat et l'innovation nous pousse à explorer de nouvelles frontières,
+                Fondé en 2020, l&apos;Atelier. est né de la vision de créer une mode qui transcende le temps et les tendances.
+                Notre passion pour l&apos;artisanat et l&apos;innovation nous pousse à explorer de nouvelles frontières,
                 créer des pièces intemporelles qui défient les tendances éphémères.
-                Chaque création est une ode à l'artisanat français, combinant techniques traditionnelles
+                Chaque création est une ode à l&apos;artisanat français, combinant techniques traditionnelles
                 et innovations audacieuses.
                 </p>
                 <p className="text-neutral-300 text-lg leading-relaxed mb-6">
-                Nous croyons en une mode qui célèbre l'individualité et l'élégance, où chaque
+                Nous croyons en une mode qui célèbre l&apos;individualité et l&apos;élégance, où chaque
                 détail compte. Notre parcours est jalonné de collaborations prestigieuses et de moments
                 marquants sur les podiums internationaux.
                 </p>
@@ -76,7 +76,7 @@ export default function AboutSection() {
             <div className="relative lg:order-2">
                 <div className="text-8xl md:text-9xl font-serif text-white/10 absolute -top-8 -left-4">"</div>
                 <blockquote className="text-2xl md:text-3xl font-light text-neutral-300 leading-relaxed italic pl-8">
-                La mode n'est pas seulement ce que l'on porte, c'est l'expression de notre âme, la poésie de notre époque
+                La mode n&apos;est pas seulement ce que l&apos;on porte, c&apos;est l&apos;expression de notre âme, la poésie de notre époque
                 traduite en formes et en matières.
                 </blockquote>
                 <div className="mt-8 pl-8">
@@ -105,7 +105,7 @@ export default function AboutSection() {
             <div>
                 <h4 className="text-amber-400 text-2xl font-serif mb-4">Éthique</h4>
                 <p className="text-neutral-400 text-md leading-relaxed">
-                Un engagement pour une mode durable et respectueuse de l'humain et de l'environnement.
+                Un engagement pour une mode durable et respectueuse de l&apos;humain et de l&apos;environnement.
                 </p>
             </div>
             </div>
