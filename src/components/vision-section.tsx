@@ -9,7 +9,7 @@ export default function VisionSection() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           {/* Citation principale */}
           <div className="relative">
-            <div className="text-8xl md:text-9xl font-serif text-black/10 absolute -top-8 -left-4">"</div>
+            <div className="text-8xl md:text-9xl font-serif text-black/10 absolute -top-8 -left-4">&quot;</div>
             <blockquote className="text-2xl md:text-3xl font-light text-neutral-800 leading-relaxed italic pl-8">
               La mode n&apos;est pas seulement ce que l&apos;on porte, c&apos;est l&apos;expression de notre âme, la poésie de notre époque
               traduite en formes et en matières.
