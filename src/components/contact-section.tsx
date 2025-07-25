@@ -1,3 +1,5 @@
+import Link from "next/link"
+
 export default function ContactSection() {
   return (
     <section className="py-32 bg-black relative overflow-hidden" id="contact-section">
@@ -23,13 +25,13 @@ export default function ContactSection() {
         <div className="flex flex-col sm:flex-row gap-8 items-center justify-center">
           <button className="group relative overflow-hidden bg-amber-400 text-black px-12 py-4 hover:bg-amber-500 transition-all duration-300 hover:scale-105">
             <span className="relative z-10 text-sm font-medium tracking-[0.2em] uppercase">
-              Demande de Collaboration
+               <Link href="/contact">Demande de Collaboration</Link>
             </span>
           </button>
 
           <button className="group text-white hover:text-amber-400 transition-colors duration-300">
             <span className="text-sm font-light tracking-[0.15em] uppercase border-b border-white/30 group-hover:border-amber-400 pb-1">
-              Découvrir l'Atelier
+               <Link href="/about">Découvrir l'Atelier</Link>
             </span>
           </button>
         </div>
@@ -56,12 +58,12 @@ export default function ContactSection() {
             <div>
               <h4 className="text-amber-400 text-sm tracking-wider uppercase mb-3">Suivez-nous</h4>
               <div className="flex justify-center space-x-6">
-                <a href="#" className="text-neutral-300 hover:text-amber-400 transition-colors duration-300">
+                <Link href="https://www.instagram.com/" className="text-neutral-300 hover:text-amber-400 transition-colors duration-300">
                   Instagram
-                </a>
-                <a href="#" className="text-neutral-300 hover:text-amber-400 transition-colors duration-300">
+                </Link>
+                <Link href="https://www.pinterest.com/" className="text-neutral-300 hover:text-amber-400 transition-colors duration-300">
                   Pinterest
-                </a>
+                </Link>
               </div>
             </div>
           </div>

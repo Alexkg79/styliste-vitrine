@@ -2,43 +2,21 @@
 
 import { useState } from "react"
 import Image from "next/image"
+import Link from "next/link"
+import collections from "@/data/collections";
 
-const collections = [
-  {
-    id: 1,
-    title: "Éternité Noire",
-    subtitle: "Collection Automne 2024",
-    image: "/collection-eternite.webp",
-    description: "L'élégance intemporelle revisitée",
-  },
-  {
-    id: 2,
-    title: "Lumière Dorée",
-    subtitle: "Haute Couture Printemps",
-    image: "/collection-lumiere.webp",
-    description: "Quand la lumière épouse la matière",
-  },
-  {
-    id: 3,
-    title: "Minimalisme Absolu",
-    subtitle: "Capsule Exclusive",
-    image: "/collection-minimal.webp",
-    description: "L'art de l'essentiel",
-  },
-  {
-    id: 4,
-    title: "Avant-Garde",
-    subtitle: "Pièces Uniques",
-    image: "/collection-avantgarde.webp",
-    description: "Repousser les limites de la création",
-  },
-]
+interface CollectionsSectionProps {
+  showCTA?: boolean;
+  showAllCollections?: boolean;
+}
 
-export default function CollectionsSection() {
+export default function CollectionsSection({ showCTA = false, showAllCollections = false }: CollectionsSectionProps) {
   const [hoveredId, setHoveredId] = useState<number | null>(null)
 
+  const collectionsToDisplay = showAllCollections ? collections : collections.slice(0, 4);
+
   return (
-    <section className="py-32 bg-black relative">
+    <section className="py-32 bg-black relative" id="collections-section">
       <div className="container mx-auto px-8">
         {/* Titre de section */}
         <div className="text-center mb-20">
@@ -47,13 +25,26 @@ export default function CollectionsSection() {
         </div>
 
         {/* Grille asymétrique */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {collections.map((collection, index) => (
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"> 
+          {collectionsToDisplay.map((collection, index) => (
             <div
               key={collection.id}
-              className={`group cursor-pointer ${
-                index === 1 ? "md:translate-y-16" : ""
-              } ${index === 3 ? "lg:translate-y-32" : ""}`}
+              className={`group cursor-pointer
+                ${
+                  // Sur les grands écrans (lg), applique le décalage pour la 2ème carte (index 1)
+                  index % 4 === 1 ? "lg:translate-y-16" : ""
+                }
+                ${
+                  // Sur les très grands écrans (xl), applique le décalage pour la 4ème carte (index 3)
+                  index % 4 === 3 ? "xl:translate-y-32" : ""
+                }
+                ${
+                  showAllCollections && index % 4 === 1 ? "lg:translate-y-16" : ""
+                }
+                ${
+                  showAllCollections && index % 4 === 3 ? "xl:translate-y-32" : ""
+                }
+              `}
               onMouseEnter={() => setHoveredId(collection.id)}
               onMouseLeave={() => setHoveredId(null)}
             >
@@ -104,13 +95,17 @@ export default function CollectionsSection() {
           ))}
         </div>
 
-        {/* CTA Collections */}
-        <div className="text-center mt-20">
-          <button className="group relative text-white border-b border-white/30 hover:border-amber-400 pb-2 transition-all duration-300">
-            <span className="text-lg font-light tracking-[0.2em] uppercase">Voir Toutes les Collections</span>
-            <div className="absolute bottom-0 left-0 w-0 h-px bg-amber-400 group-hover:w-full transition-all duration-500"></div>
-          </button>
-        </div>
+        {/* CTA Collections : Conditionnel si showCTA est true */}
+        {showCTA && (
+          <div className="text-center mt-20">
+            <Link href="/collections" passHref>
+              <button className="group relative text-white border-b border-white/30 hover:border-amber-400 pb-2 transition-all duration-300">
+                <span className="text-lg font-light tracking-[0.2em] uppercase">Voir Toutes les Collections</span>
+                <div className="absolute bottom-0 left-0 w-0 h-px bg-amber-400 group-hover:w-full transition-all duration-500"></div>
+              </button>
+            </Link>
+          </div>
+        )}
       </div>
     </section>
   )

@@ -13,7 +13,7 @@ export default function Home() {
       <Header />
       <HeroSection />
       <VisionSection />
-      <CollectionsSection />
+      <CollectionsSection showCTA={true} showAllCollections={false} />
       <NewsSection />
       <ContactSection />
       <Footer />

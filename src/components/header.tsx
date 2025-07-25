@@ -2,20 +2,29 @@
 
 import { useState } from "react"
 import { Menu, X } from "lucide-react"
+import Link from "next/link"
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen)
 
+  const navItems = [
+    { name: "Accueil", href: "/" },
+    { name: "Portfolio", href: "/portfolio" },
+    { name: "Collections", href: "/collections" },
+    { name: "À Propos", href: "/about" },
+    { name: "Contact", href: "/contact" },
+  ]
+
   return (
     <>
       <header className="fixed top-0 left-0 right-0 z-50 bg-black/80 backdrop-blur-md">
         <div className="flex items-center justify-between px-8 py-6">
-          {/* Logo */}
-          <div className="text-2xl font-serif text-white tracking-wider">
+          {/* Logo - Rendre cliquable pour revenir à l'accueil */}
+          <Link href="/" className="text-2xl font-serif text-white tracking-wider">
             ATELIER<span className="text-amber-400">.</span>
-          </div>
+          </Link>
 
           {/* Menu Burger */}
           <button
@@ -48,18 +57,18 @@ export default function Header() {
         <div className="flex items-center justify-center h-full">
           <nav className="text-center">
             <ul className="space-y-8">
-              {["Accueil", "Portfolio", "Collections", "À Propos", "Contact"].map((item, index) => (
-                <li key={item}>
-                  <a
-                    href={`#${item.toLowerCase().replace(" ", "-")}`}
+              {navItems.map((item, index) => (
+                <li key={item.name}>
+                  <Link
+                    href={item.href}
                     className={`block text-6xl md:text-8xl font-serif text-white hover:text-amber-400 transition-all duration-500 transform hover:scale-105 ${
                       isMenuOpen ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"
                     }`}
                     style={{ transitionDelay: `${index * 100}ms` }}
                     onClick={toggleMenu}
                   >
-                    {item}
-                  </a>
+                    {item.name}
+                  </Link>
                 </li>
               ))}
             </ul>
