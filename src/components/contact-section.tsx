@@ -1,6 +1,6 @@
 export default function ContactSection() {
   return (
-    <section className="py-32 bg-black relative overflow-hidden">
+    <section className="py-32 bg-black relative overflow-hidden" id="contact-section">
       {/* Texture de fond */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute inset-0 bg-gradient-to-br from-amber-400/20 to-transparent"></div>

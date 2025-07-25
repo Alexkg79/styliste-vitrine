@@ -4,6 +4,7 @@ import VisionSection from "../components/vision-section"
 import CollectionsSection from "../components/collections-section"
 import NewsSection from "../components/news-section"
 import ContactSection from "../components/contact-section"
+import Footer from "../components/footer"
 
 
 export default function Home() {
@@ -15,6 +16,7 @@ export default function Home() {
       <CollectionsSection />
       <NewsSection />
       <ContactSection />
+      <Footer />
     </main>
   )
 }
